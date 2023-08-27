@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type='text/javascript' src="tts.js"></script>
+        <link rel = "stylesheet" type = "text/css" href = "https://chunkihwan.github.io/css3d_card/css/reset.css"/>
+        <link rel = "stylesheet" type = "text/css" href = "result.css"/>
+
+        <audio id="audioSrc" autoplay>
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <script src = "audioplay.js"></script>
+        <script>
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined
+                            ? true
+                            : decodeURIComponent(sParameterName[1]);
+                    }
+                }
+                return false;
+            };
+
+            var wrap;
+            var x = 0,
+                y = 0;
+            var mx = 0,
+                my = 0;
+            var orientNumX = 0;
+            var orientNumY = 0;
+            var isMobile = false;
+            var isIos = false;
+
+            function loopMobile() {
+                mx += (x - mx) * 0.1;
+                my += (y - my) * 0.1;
+                wrap.style.transform =
+                    'translate3d(-50%, -50%, 0) rotateX(' +
+                    (my - 50) +
+                    'deg) rotateY(' +
+                    mx +
+                    'deg)';
+                window.requestAnimationFrame(loopMobile);
+            }
+
+            function loop() {
+                mx += (x - mx) * 0.1;
+                my += (y - my) * 0.1;
+
+                wrap.style.transform =
+                    'translate3d(-50%, -50%, 0) rotateX(' +
+                    my / 10 +
+                    'deg) rotateY(' +
+                    -mx / 10 +
+                    'deg)';
+
+                window.requestAnimationFrame(loop);
+            }
+
+            function mobileChk() {
+                var mobileKeyWords = new Array(
+                    'Android',
+                    'iPhone',
+                    'iPad',
+                    'BlackBerry',
+                    'Windows CE',
+                    'SAMSUNG',
+                    'LG',
+                    'MOT',
+                    'SonyEricsson'
+                );
+                for (var info in mobileKeyWords) {
+                    if (navigator.userAgent.match(mobileKeyWords[info]) != null) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function iosChk() {
+                var mobileKeyWords = new Array('iPhone', 'iPad');
+                for (var info in mobileKeyWords) {
+                    if (navigator.userAgent.match(mobileKeyWords[info]) != null) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function runAfterEvent() {
+                var fw = getUrlParameter('pfw');
+                $('.contentWrap .front h1').css('background', "url('" + fw + "') center top / cover no-repeat");
+
+                wrap = document.querySelector('.contentWrap');
+                $('.contentWrap').show();
+
+                isMobile = mobileChk();
+                isIos = iosChk();
+
+                wrap.classList.add('active');
+
+                if (isMobile) {
+                    if (isIos) {
+                        DeviceOrientationEvent.requestPermission()
+                            .then(function () {
+                                mobileOrientationChk();
+                            })
+                            .catch(console.error);
+                    } else {
+                        mobileOrientationChk();
+                    }
+
+                    function mobileOrientationChk() {
+                        window.addEventListener('deviceorientation', function (event) {
+                            x = event.gamma;
+                            y = event.beta;
+                        });
+                        loopMobile();
+                    }
+                } else {
+                    window.addEventListener('mousemove', function (e) {
+                        x = e.clientX - window.innerWidth / 2;
+                        y = e.clientY - window.innerHeight / 2;
+                        clearInterval(rotate_interval);
+                        $(".bgs").css("transform", "rotate3d(0, 1, 0, 0deg)");
+                    });
+                    loop();
+                }
+            }
+
+            /* rotation event */
+            var rotate_interval;
+            var rotate_i = 0;
+            function rotate() {
+                rotate_i = rotate_i + 0.3; //회전 속도
+                // $(".bgs").css("transform", "rotate("+(rotate_i)+"deg)");
+                $(".bgs").css("transform", "rotate3d(0, 1, 0, "+(rotate_i)+"deg)");
+                if (rotate_i>360) rotate_i = 0;
+            }
+
+            $(document).ready(function () {
+
+                var nm = getUrlParameter('pfw');
+                $("div.nm").text(nm.substring(nm.lastIndexOf("/")+1, nm.length));
+                $("div.nm").text($("div.nm").text().split("_")[0]);
+                console.log($("div.nm").text());
+
+                /*
+                var tts = new SpeechText('ko_KR', 'div.nm');
+                $("div.bgs").click(function() {
+                    tts.toggle();
+                });
+                */
+               
+                var bg = getUrlParameter('pBg');
+                $(".bgs").append("<img class='img_bg' src='"+bg+"'>");
+                $(".bgs>img.img_bg").delay(500).fadeIn(500).delay(2000).fadeOut(500);
+                setTimeout(function() { 
+                    // $(".bgs").css("background-color", "red");
+                    $(".bgs").css("width", "100%");
+                    runAfterEvent();
+                    rotate_interval = setInterval(rotate, 1);
+                }, 4000);
+
+            });
+        
+        </script>
+
+    </head>
+    <style>
+        div.bgs {width:100vh;height:100vh;}
+        div.bgs>img.img_bg {position: absolute; top: 14%; left: calc(50% - 530px); display: none;}
+        div.contentWrap {display:none; top: 45%; left: 50%;}
+
+    </style>
+<!--calc(50% - 550px); -->
+    <body>
+        <div class="bgs">
+<!--
+            <button id="playButton">Play Audio</button>
+-->
+            <div class="contentWrap">
+                <div class="front">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+        <div class='nm'></div>
+    </body>
+</html>
