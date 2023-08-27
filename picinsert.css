@@ -3,7 +3,7 @@ body {
 }
 
 .background-image {
-  background-image: url("asset/backgroud.png");
+  background-image: url("images/backgroud.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;

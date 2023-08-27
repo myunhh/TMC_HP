@@ -167,8 +167,8 @@ function PictureShow() {
 
     for (var i = 0; i < arrResult.length; i++) {
         if (arrResult[i] == r) {
-            FirImageElement.src = 'asset/' + arrImgs[i][0];
-            SecImageElement.src = 'asset/' + arrImgs[i][1];
+            FirImageElement.src = 'images/' + arrImgs[i][0];
+            SecImageElement.src = 'images/' + arrImgs[i][1];
             break;
         }
     }
