@@ -3,7 +3,7 @@ body {
 }
 
 .background-image {
-  background-image: url("images/backgroud.png");
+  background-image: url("backgroud.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -35,7 +35,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   position: absolute;
-  top: 23%;
+  top: 22%;
   left: 50%;     
   transform: translate(-50%, 0); 
 }
@@ -140,8 +140,8 @@ body {
 
 .start {
   position: absolute;
-  top: 75%;
-  left: 35%;     
+  top: 77%;
+  left: 37%;     
   transform: translate(-30%, -50%);
   height: 102px;
   width: 339px;
@@ -164,8 +164,8 @@ body {
 
 .predict {
   position: absolute;
-  top: 75%;
-  left: 65%;
+  top: 77%;
+  left:63%;
   transform: translate(-70%, -50%);
   height: 102px;
   width: 339px;
