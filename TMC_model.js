@@ -5,7 +5,6 @@ async function init() {
     const modelURL = URL + 'model.json';
     const metadataURL = URL + 'metadata.json';
 
-    // Initialize startButton here
     const startButton = document.getElementById('start-button');
 
     startButton.disabled = true;
@@ -173,120 +172,5 @@ function PictureShow() {
         }
     }
 
-    //audioSelect();
-
     location.href = 'result.html?pBg=' + FirImageElement.src + '&pfw=' + SecImageElement.src;
 }
-
-/*
-
-function audioSelect() {
-    var r = document.getElementById('pname').innerHTML.replace(' ', ''); 
-    var result = '';
-    var playAudioFiles = '';
-
-    for (var i = 0; i < arrResult.length; i++) {
-        if (arrResult[i] == r) {
-            arrResult[i] = result;
-            break;
-        }
-    }
-
-    if (result == '해리포터') {
-        playAudioFiles = 'voice_GF.mp3';
-    }
-    
-    else if (result == '론위즐리') {
-        playAudioFiles = 'voice_GF.mp3';
-    }
-    
-    else if (result == '헤르미온느그레인저') {
-        playAudioFiles = 'voice_GF.mp3';
-    }
-    
-    else if (result == '네빌롱바텀') {
-        playAudioFiles = 'voice_GF.mp3';
-    }
-    
-    else if (result == '세드릭디고리') {
-        playAudioFiles = 'voice_HF.mp3';
-    }
-    
-    else if (result == '수잔본즈') {
-        playAudioFiles = 'voice_HF.mp3';
-    }
-    
-    else if (result == '루나러브굿') {
-        playAudioFiles = 'voice_RC.mp3';
-    }
-    
-    else if (result == '초챙') {
-        playAudioFiles = 'voice_RC.mp3';
-    }
-    
-    else if (result == '돌로레스엄브릿지') {
-        playAudioFiles = 'voice_MM.mp3';
-    }
-    
-    else if (result == '코넬리우스퍼지') {
-        playAudioFiles = 'voice_MM.mp3';
-    }
-    
-    else if (result == '그레고리고일') {
-        playAudioFiles = 'voice_SL.mp3';
-    }
-    
-    else if (result == '드레이코말포이') {
-        playAudioFiles = 'voice_SL.mp3';
-    }
-    
-    else if (result == '빈센트크레이브') {
-        playAudioFiles = 'voice_SL.mp3';
-    }
-    
-    else if (result == '루시우스말포이') {
-        playAudioFiles = 'voice_DE.mp3';
-    }
-    
-    else if (result == '벨라트릭스레스트랭') {
-        playAudioFiles = 'voice_DE.mp3';
-    }
-    
-    else if (result == '볼드모트') {
-        playAudioFiles = 'voice_DE.mp3';
-    }
-    
-    else if (result == '루베우스해그리드') {
-        playAudioFiles = 'voice_TC.mp3';
-    }
-    
-    else if (result == '미네르바맥고나걸') {
-        playAudioFiles = 'voice_TC.mp3';
-    }
-    
-    else if (result == '세베루스스네이프') {
-        playAudioFiles = 'voice_TC.mp3';
-    }
-    
-    else if (result == '시빌패트리샤트릴로니') {
-        playAudioFiles = 'voice_TC.mp3';
-    }
-    
-    else if (result == '알버스덤블도어') {
-        playAudioFiles = 'voice_TC.mp3';
-    }
-    
-    else if (result == '질데로이록허트') {
-        playAudioFiles = 'voice_TC.mp3';
-    }
-    
-    else if (result == '호러스슬러그혼') {
-        playAudioFiles = 'voice_TC.mp3';
-    }
-    
-    
-    window.audiofile = playAudioFiles;
-    window.result = result;
-}
-
-*/

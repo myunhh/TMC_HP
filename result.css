@@ -49,19 +49,6 @@ button.dimd {
   display: none;
 }
 
-/*.background {
-  background-image: url("result_bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
-
 .contentWrap {
   position: absolute;
   top: 51%;
@@ -140,4 +127,13 @@ button.dimd {
   transform-origin: bottom;
   transform: translate3d(0px, 0px, 2px);
   color: #000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
