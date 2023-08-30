@@ -8,16 +8,16 @@
     <body>
         <div class="background-image">
             <button class="start" id="start-button" type="button" onclick="init()">
-                <img class="start" src="images/start.png">
+                <img class="start" src="images/start.png" style="padding-top : calc((16 / 9 * 100));">
             </button>
             <button class="predict" type="button" onclick="predict()">
-                <img class="predict" src="images/predict.png">
+                <img class="predict" src="images/predict.png" style="padding-top : calc((16 / 9 * 100));">
             </button>
             <script
                 class="jsbin"
                 src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
             ></script>
-            <div class="file-upload">
+            <div class="file-upload" style="padding-top : calc((16 / 9 * 100));">
                 <button
                 class="file-upload-btn"
                 type="button"
@@ -25,7 +25,7 @@
                 >
                 <img class="image1" src="images/button_4.png">
             </button>
-            <div class="image-upload-wrap">
+            <div class="image-upload-wrap" style="padding-top : calc((16 / 9 * 100));">
                 <input
                     class="file-upload-input"
                     type="file"
@@ -33,7 +33,7 @@
                     accept="image/*"
                 />
                 <img class="image-title-wrap" src="images/button_2.png">
-            </div>
+            </div style="padding-top : calc((16 / 9 * 100));">
                 <div class="file-upload-content">
                     <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                     <div class="image-title-wrap">
@@ -44,9 +44,9 @@
                 </div>
             </div>
         </div>
-        <div id="webcam-container"></div>
-        <div id="label-container" style="display: none;"></div>
-        <div><span id="pname"></span> <span id="prate"></span></div>
+        <div id="webcam-container" style="padding-top : calc((16 / 9 * 100));"></div>
+        <div id="label-container" style="display: none; padding-top : calc((16 / 9 * 100));"></div>
+        <div style="padding-top : calc((16 / 9 * 100));"><span id="pname"></span> <span id="prate"></span></div>
 
         <img id="FirImage" src="" /><br />
         <img id="SecImage" src="" />

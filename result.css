@@ -86,7 +86,7 @@ button.dimd {
   height: 1376px;
   object-fit: contain;
   background-image: url("") center top/1042px 1376px no-repeat;
-  transform: translate3d(55px, 40px, 57px);
+  transform: translate3d(55px, 40px, 57px);;
 }
 
 .contentWrap .back {
