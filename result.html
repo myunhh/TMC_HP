@@ -42,6 +42,14 @@
         $(".bgs").css("width", "100%");
         runAfterEvent();
       }, 4000);
+
+      var fw = getUrlParameter("pfw");
+      var bg = getUrlParameter("pBg");
+
+      var imagePreload = new Image();
+      imagePreload.src = fw;
+      imagePreload.src = bg;
+
     });
   </script>
 </head>
