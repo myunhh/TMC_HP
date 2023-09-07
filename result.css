@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
 body {
-  background-image: url("images/result_bg.png");
+  background-image: url("");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -76,57 +78,56 @@ button.dimd {
   perspective: 800px;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
+  top: 100%;
+  left: 30%;
 }
 
 .contentWrap .front h1 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 1042px;
-  height: 1376px;
+  top: 17%;
+  left: 49.5%;
+  width: 50%;
+  height: 50%;
   object-fit: contain;
-  background-image: url("") center top/1042px 1376px no-repeat;
-  transform: translate3d(55px, 40px, 57px);;
+  background-image: url("") no-repeat;
+  z-index: 2;
 }
 
-.contentWrap .back {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  background: linear-gradient(180deg, #d8d8d8, #fff);
-  transform: rotateX(70deg);
-  transform-origin: top center;
-  border-top: none;
-  transform-style: preserve-3d;
-  perspective: 800px;
-  border-radius: 0 0 10px 10px;
-}
-
-.contentWrap .back h3 {
+.contentWrap .front h2 {
   position: absolute;
-  font-size: 12px;
-  text-align: right;
-  font-weight: 100;
-  right: 0px;
-  bottom: 0;
-  transform-origin: bottom;
-  transform: translate3d(-20px, 0px, 2px);
-  color: #000;
-  font-family: "Handlee", cursive, "Apple SD Gothic Neo", arial;
+  top: 50%;
+  left: 35%;
+  width: 80%;
+  height: 40%;
+  object-fit: contain;
+  background-image: url("") no-repeat;
+  z-index: 0;
 }
 
-.contentWrap .back .msg {
+.contentWrap .front h3 {
   position: absolute;
-  display: block;
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  font-weight: 100;
-  top: 100px;
-  left: 0px;
-  transform-origin: bottom;
-  transform: translate3d(0px, 0px, 2px);
-  color: #000;
+  top: 14%;
+  left: 118%;
+  width: 50%;
+  height: 71%;
+  object-fit: none;
+  object-position: 50% 50%;
+  background-image: url("") no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.contentWrap .front h4 {
+  position: absolute;
+  top: 14%;
+  left: -13%;
+  width: 50%;
+  height: 71%;
+  object-fit: none;
+  object-position: 50% 50%;
+  background-image: url("") no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .container {

@@ -87,73 +87,73 @@ var arrImgs = new Array();
 var ri = 0;
 
 arrResult[ri] = '해리포터';
-arrImgs[ri++] = ['Gryffindor.png', 'Gryffindor_Harry_Potter.png'];
+arrImgs[ri++] = ['character_card/Gryffindor.png', 'character_card/Gryffindor_Harry_Potter.png', 'flag/Gryffindor_Flag.png', 'background/Gryffindor.png', 'character_info/HarryPotter.png'];
 
 arrResult[ri] = '론위즐리';
-arrImgs[ri++] = ['Gryffindor.png', 'Gryffindor_Ron_Weasley.png'];
+arrImgs[ri++] = ['character_card/Gryffindor.png', 'character_card/Gryffindor_Ron_Weasley.png', 'flag/Gryffindor_Flag.png', 'background/Gryffindor.png', 'character_info/RonWeasley.png'];
 
 arrResult[ri] = '헤르미온느그레인저';
-arrImgs[ri++] = ['Gryffindor.png', 'Gryffindor_Hermione_Granger.png'];
+arrImgs[ri++] = ['character_card/Gryffindor.png', 'character_card/Gryffindor_Hermione_Granger.png', 'flag/Gryffindor_Flag.png', 'background/Gryffindor.png', 'character_info/HermioneGranger.png'];
 
 arrResult[ri] = '네빌롱바텀';
-arrImgs[ri++] = ['Gryffindor.png', 'Gryffindor_Neville_Longbottom.png'];
+arrImgs[ri++] = ['character_card/Gryffindor.png', 'character_card/Gryffindor_Neville_Longbottom.png', 'flag/Gryffindor_Flag.png', 'background/Gryffindor.png', 'character_info/NevilleLongbattom.png'];
 
 arrResult[ri] = '세드릭디고리';
-arrImgs[ri++] = ['Hufflepuff.png', 'Hufflepuff_Cedric_Diggory.png'];
+arrImgs[ri++] = ['character_card/Hufflepuff.png', 'character_card/Hufflepuff_Cedric_Diggory.png', 'flag/Hufflepuff_Flag.png', 'background/Gryffindor.png', 'character_info/CedricDiggory.png'];
 
 arrResult[ri] = '수잔본즈';
-arrImgs[ri++] = ['Hufflepuff.png', 'Hufflepuff_Susan_Bones.png'];
+arrImgs[ri++] = ['character_card/Hufflepuff.png', 'character_card/Hufflepuff_Susan_Bones.png', 'flag/Hufflepuff_Flag.png', 'background/Hufflepuff.png', 'character_info/SusanBones.png'];
 
 arrResult[ri] = '루나러브굿';
-arrImgs[ri++] = ['Ravenclaw.png', 'Ravenclaw_Luna_Lovegood.png'];
+arrImgs[ri++] = ['character_card/Ravenclaw.png', 'character_card/Ravenclaw_Luna_Lovegood.png', 'flag/Ravenclaw_Flag.png', 'background/Ravenclaw.png', 'character_info/LunaLovegood.png'];
 
 arrResult[ri] = '초챙';
-arrImgs[ri++] = ['Ravenclaw.png', 'Ravenclaw_Cho_Chang.png'];
+arrImgs[ri++] = ['character_card/Ravenclaw.png', 'character_card/Ravenclaw_Cho_Chang.png', 'flag/Ravenclaw_Flag.png', 'background/Ravenclaw.png', 'character_info/ChoChang.png'];
 
 arrResult[ri] = '돌로레스엄브릿지';
-arrImgs[ri++] = ['Ministry_of_Magic.png', 'Ministry_of_Magic_Dolores_Umbridge.png'];
+arrImgs[ri++] = ['character_card/Ministry_of_Magic.png', 'character_card/Ministry_of_Magic_Dolores_Umbridge.png', 'flag/Ministry_of_Magic_Flag.png', 'background/Ministry_of_Magic.png', 'character_info/DoloresUmbridge.png'];
 
 arrResult[ri] = '코넬리우스퍼지';
-arrImgs[ri++] = ['Ministry_of_Magic.png', 'Ministry_of_Magic_Cornelius_Fudge.png'];
+arrImgs[ri++] = ['character_card/Ministry_of_Magic.png', 'character_card/Ministry_of_Magic_Cornelius_Fudge.png', 'flag/Ministry_of_Magic_Flag.png', 'background/Ministry_of_Magic.png', 'character_info/CorneliusFudge.png'];
 
 arrResult[ri] = '그레고리고일';
-arrImgs[ri++] = ['Slytherin.png', 'Slytherin_Gregory_Goyle.png'];
+arrImgs[ri++] = ['character_card/Slytherin.png', 'character_card/Slytherin_Gregory_Goyle.png', 'flag/Slytherin_Flag.png', 'background/Slytherin.png', 'character_info/GregoryGoyle.png'];
 
 arrResult[ri] = '드레이코말포이';
-arrImgs[ri++] = ['Slytherin.png', 'Slytherin_Draco_Malfoy.png'];
+arrImgs[ri++] = ['character_card/Slytherin.png', 'character_card/Slytherin_Draco_Malfoy.png', 'flag/Slytherin_Flag.png', 'background/Slytherin.png', 'character_info/DracoMalfoy.png'];
 
 arrResult[ri] = '빈센트크레이브';
-arrImgs[ri++] = ['Slytherin.png', 'Slytherin_Vincent_Crabbe.png'];
+arrImgs[ri++] = ['character_card/Slytherin.png', 'character_card/Slytherin_Vincent_Crabbe.png', 'flag/Slytherin_Flag.png', 'background/Slytherin.png', 'character_info/VincentCrabbe.png'];
 
 arrResult[ri] = '루시우스말포이';
-arrImgs[ri++] = ['Death_Eaters.png', 'Death_Eaters_Lucius_Malfoy.png'];
+arrImgs[ri++] = ['character_card/Death_Eaters.png', 'character_card/Death_Eaters_Lucius_Malfoy.png', 'flag/Death_Eaters_Flag.png', 'background/Death_Eaters.png', 'character_info/LuciusMalfoy.png'];
 
 arrResult[ri] = '벨라트릭스레스트랭';
-arrImgs[ri++] = ['Death_Eaters.png', 'Death_Eaters_Bellatrix_Lestrange.png'];
+arrImgs[ri++] = ['character_card/Death_Eaters.png', 'character_card/Death_Eaters_Bellatrix_Lestrange.png', 'flag/Death_Eaters_Flag.png', 'background/Death_Eaters.png', 'character_info/BellatrixLestrang.png'];
 
 arrResult[ri] = '볼드모트';
-arrImgs[ri++] = ['Death_Eaters.png', 'Death_Eaters_Voldemort.png'];
+arrImgs[ri++] = ['character_card/Death_Eaters.png', 'character_card/Death_Eaters_Voldemort.png', 'flag/Death_Eaters_Flag.png', 'background/Death_Eaters.png', 'character_info/Voldemort.png'];
 
 arrResult[ri] = '루베우스해그리드';
-arrImgs[ri++] = ['Hogwarts.png', 'Hogwarts_Rubeus_Hagrid.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Rubeus_Hagrid.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/RubeusHagrid.png'];
 
 arrResult[ri] = '미네르바맥고나걸';
-arrImgs[ri++] = ['Hogwarts.png', 'Hogwarts_Minerva_McGonagall.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Minerva_McGonagall.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/MinervaMcGonagall.png'];
 
 arrResult[ri] = '세베루스스네이프';
-arrImgs[ri++] = ['Hogwarts.png', 'Hogwarts_Severus_Snape.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Severus_Snape.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/SeverusSnape.png'];
 
 arrResult[ri] = '시빌패트리샤트릴로니';
-arrImgs[ri++] = ['Hogwarts.png', 'Hogwarts_Sibyl_Patricia_Trelawney.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Sibyl_Patricia_Trelawney.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/SybillPatriciaTrelawney.png'];
 
 arrResult[ri] = '알버스덤블도어';
-arrImgs[ri++] = ['Hogwarts.png', 'Hogwarts_Albus_Dumbledore.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Albus_Dumbledore.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/AlbusDumbledore.png'];
 
 arrResult[ri] = '질데로이록허트';
-arrImgs[ri++] = ['Hogwarts.png', 'Hogwarts_Gellert_Grindelwald.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Gellert_Grindelwald.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/GilderoyLockhart.png'];
 
 arrResult[ri] = '호러스슬러그혼';
-arrImgs[ri++] = ['Hogwarts.png', 'Hogwarts_Horace_Slughorn.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Horace_Slughorn.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/HoraceSlughorn.png'];
 
 function PictureShow() {
     console.log(arrResult[0]);
@@ -161,16 +161,23 @@ function PictureShow() {
 
     var FirImageElement = document.getElementById('FirImage');
     var SecImageElement = document.getElementById('SecImage');
+    var backgroundImg = document.getElementById('BacImage');
+    var flagImg = document.getElementById('FlagImg');
+    var InfoImg = document.getElementById('InfoImg');
 
     var r = document.getElementById('pname').innerHTML.replace(' ', '');
 
     for (var i = 0; i < arrResult.length; i++) {
         if (arrResult[i] == r) {
-            FirImageElement.src = 'images/' + arrImgs[i][0];
-            SecImageElement.src = 'images/' + arrImgs[i][1];
+            FirImageElement.src = 'images/' + arrImgs[i][0]; //그릅별 이미지
+            SecImageElement.src = 'images/' + arrImgs[i][1]; //인물별 이미지
+            flagImg.src = 'images/' + arrImgs[i][2]; //그룹별 깃발
+            backgroundImg.src = 'images/' + arrImgs[i][3]; //그룹별 백그라운드 이미지
+            InfoImg.src = 'images/' + arrImgs[i][4]; //캐릭터 설명 이미지 가져오기
+            
             break;
         }
     }
 
-    location.href = 'result.html?pBg=' + FirImageElement.src + '&pfw=' + SecImageElement.src;
+    location.href = 'result.html?pBg=' + FirImageElement.src + '&pfw=' + SecImageElement.src + '&pFg=' + flagImg.src + '&pBac=' + backgroundImg.src + '&pIf=' + InfoImg.src;
 }

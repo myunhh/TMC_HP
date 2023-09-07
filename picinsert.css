@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/backgroud.png");
+  background-image: url("images/picinsert/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -131,6 +131,7 @@ body {
   max-width: 200px;
   margin: auto;
   padding: 20px;
+  z-index: 1;
 }
 
 .remove-image {
@@ -206,4 +207,13 @@ body {
   height: 100%;
   width: 100%;
   z-index: 0;
+}
+
+.board{
+  position: absolute;
+  top: 46%;
+  left: 50%;     
+  transform: translate(-50%, -50%);
+  height: 77%;
+  width: 67%;
 }

@@ -8,32 +8,34 @@
     <body>
         <div class="background-image">
             <button class="start" id="start-button" type="button" onclick="init()">
-                <img class="start" src="images/start.png" style="padding-top : calc((16 / 9 * 100));">
+                <img class="start" src="images/picinsert/start.png">
             </button>
             <button class="predict" type="button" onclick="predict()">
-                <img class="predict" src="images/predict.png" style="padding-top : calc((16 / 9 * 100));">
+                <img class="predict" src="images/picinsert/predict.png">
             </button>
             <script
                 class="jsbin"
                 src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
             ></script>
-            <div class="file-upload" style="padding-top : calc((16 / 9 * 100));">
+            <div class="file-upload">
                 <button
                 class="file-upload-btn"
                 type="button"
                 onclick="$('.file-upload-input').trigger('click')"
                 >
-                <img class="image1" src="images/button_4.png">
+                <img class="file-upload-btn" src="images/picinsert/button_4.png">
+                <!--<img class="image1" src="images/button_4.png">-->
             </button>
-            <div class="image-upload-wrap" style="padding-top : calc((16 / 9 * 100));">
+            <div class="image-upload-wrap">
                 <input
                     class="file-upload-input"
                     type="file"
                     onchange="readURL(this);"
                     accept="image/*"
+                    style="z-index: 1;"
                 />
-                <img class="image-title-wrap" src="images/button_2.png">
-            </div style="padding-top : calc((16 / 9 * 100));">
+                <img class="image-title-wrap" src="images/picinsert/button_2.png" style="z-index: 0;">
+            </div>
                 <div class="file-upload-content">
                     <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                     <div class="image-title-wrap">
@@ -43,13 +45,23 @@
                     </div>
                 </div>
             </div>
+            <div class="board">
+                <img class="board" src="images/picinsert/bord.png">
+            </div>
         </div>
-        <div id="webcam-container" style="padding-top : calc((16 / 9 * 100));"></div>
-        <div id="label-container" style="display: none; padding-top : calc((16 / 9 * 100));"></div>
-        <div style="padding-top : calc((16 / 9 * 100));"><span id="pname"></span> <span id="prate"></span></div>
+        <div id="webcam-container"></div>
+        <div id="label-container" style="display: none;"></div>
+        <div>
+            <span id="pname"></span>
+            <span id="prate"></span>
+        </div>
+        <!-- appendChild 오류시 위 div태그 한줄로 합쳐보기 -->
 
         <img id="FirImage" src="" /><br />
-        <img id="SecImage" src="" />
+        <img id="SecImage" src="" /><br />
+        <img id="BacImage" src="" /><br />
+        <img id="FlagImg" src=""  /><br />
+        <img id="InfoImg" src="" /><br />
 
         <script src="TMC_model.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>

@@ -1,87 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script type="text/javascript" src="tts.js"></script>
-  <link rel="stylesheet" type="text/css" href="result.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script>
-    var getUrlParameter = function getUrlParameter(sParam) {
-      var sPageURL = decodeURIComponent(window.location.search.substring(1));
-      var sURLVariables = sPageURL.split("&");
-      for (var i = 0; i < sURLVariables.length; i++) {
-        var sParameterName = sURLVariables[i].split("=");
-        if (sParameterName[0] === sParam) {
-          return sParameterName[1] === undefined ? true : sParameterName[1];
+  <head>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="result.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1));
+        var sURLVariables = sPageURL.split("&");
+        for (var i = 0; i < sURLVariables.length; i++) {
+          var sParameterName = sURLVariables[i].split("=");
+          if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+          }
         }
+        return false;
+      };
+
+      var wrap;
+
+      function runAfterEvent() {
+        var fw = getUrlParameter("pfw");
+        $(".contentWrap .front h1").css(
+          "background",
+          "url('" + fw + "') center top / cover no-repeat"
+        );
+        console.log("1");
+        wrap = document.querySelector(".contentWrap");
+        $(".contentWrap").show();
+
+        wrap.classList.add("active");
       }
-      return false;
-    };
 
-    var wrap;
+      $(document).ready(function () {
+        var nm = getUrlParameter("pfw");
+        $("div.nm").text(nm.split("/").pop().split("_")[0]);
+        var bg = getUrlParameter("pBg");
+        $(".bgs").append("<img class='img_bg' src='" + bg + "'>");
+        console.log($(".bgs").html());
+        $(".bgs > img.img_bg").delay(500).fadeIn(500).delay(2000).fadeOut(500);
+        setTimeout(function () {
+          $(".bgs").css("width", "100%");
+          runAfterEvent();
+        }, 4000);
 
-    function runAfterEvent() {
-      var fw = getUrlParameter("pfw");
-      $(".contentWrap .front h1").css("background", "url('" + fw + "') center top / cover no-repeat");
-      console.log("1");
-      wrap = document.querySelector(".contentWrap");
-      $(".contentWrap").show();
+        var fw = getUrlParameter("pfw");
+        var bg = getUrlParameter("pBg");
 
-      wrap.classList.add("active");
+        var pBac = getUrlParameter("pBac");
+        if (pBac) {
+          $("body").css(
+            "background",
+            "url('" + pBac + "') center top / cover no-repeat"
+          );
+        }
+
+        var flag = getUrlParameter("pFg");
+        var info = getUrlParameter("pIf");
+
+        if (info) {
+          $(".contentWrap .front h2").css(
+            "background",
+            "url('" + info + "') center top / cover no-repeat"
+          );
+        }
+
+        if(flag) {
+          $(".contentWrap .front h3").css(
+            "background",
+            "url('" + flag + "') center top / cover no-repeat"
+          );
+          $(".contentWrap .front h4").css(
+            "background",
+            "url('" + flag + "') center top / cover no-repeat"
+          );
+        }
+
+        var imagePreload = new Image();
+        imagePreload.src = fw;
+        imagePreload.src = bg;
+        imagePreload.src = pBac;
+        imagePreload.src = flag;
+        imagePreload.src = info;
+
+        imagePreload.onload = function () {
+
+        };
+      });
+    </script>
+  </head>
+  <style>
+    div.bgs {
+      width: 100vh;
+      height: 100vh;
     }
-
-    $(document).ready(function () {
-      var nm = getUrlParameter("pfw");
-      $("div.nm").text(nm.split("/").pop().split("_")[0]);
-
-      var bg = getUrlParameter("pBg");
-      $(".bgs").append("<img class='img_bg' src='" + bg + "'>");
-      console.log($(".bgs").html());
-      $(".bgs > img.img_bg").delay(500).fadeIn(500).delay(2000).fadeOut(500);
-      setTimeout(function () {
-        $(".bgs").css("width", "100%");
-        runAfterEvent();
-      }, 4000);
-
-      var fw = getUrlParameter("pfw");
-      var bg = getUrlParameter("pBg");
-
-      var imagePreload = new Image();
-      imagePreload.src = fw;
-      imagePreload.src = bg;
-
-      imagePreload.onload = function() {
-        
-      }
-    });
-  </script>
-</head>
-<style>
-  div.bgs {
-    width: 100vh;
-    height: 100vh;
-  }
-  div.bgs > img.img_bg {
-    position: absolute;
-    top: 14%;
-    left: calc(50% - 540px);
-    display: none;
-  }
-  div.contentWrap {
-    display: none;
-    top: 45%;
-    left: 20%;
-  }
-</style>
-<body>
-  <div class="container">
-    <div class="bgs">
-      <div class="contentWrap">
-        <div class="front">
-          <h1 class="animate__animated animate__fadeInRight"></h1>
+    div.bgs > img.img_bg {
+      position: absolute;
+      top: 14%;
+      left: 36%;
+      display: none;
+      width: 27%;
+      height: 71%;
+    }
+    div.contentWrap {
+      display: none;
+      top: 45%;
+      left: 20%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="bgs">
+        <div class="contentWrap">
+          <div class="front">
+            <h1 class="animate__animated animate__fadeInDown"></h1>
+            <h2 class="animate__animated animate__fadeInUp"> </h2>
+            <h3 class="animate__animated animate__rotateInDownRight"> </h3>
+            <h4 class="animate__animated animate__rotateInDownLeft"> </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
