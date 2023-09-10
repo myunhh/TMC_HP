@@ -23,6 +23,7 @@ body {
   background-color: none;
   width: 100%;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .file-upload-btn {
@@ -69,6 +70,7 @@ body {
 .file-upload-content {
   display: none;
   text-align: center;
+  z-index: 2;
 }
 
 .file-upload-input {
@@ -127,8 +129,8 @@ body {
 }
 
 .file-upload-image {
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 300px;
+  max-width: 300px;
   margin: auto;
   padding: 20px;
   z-index: 1;
@@ -136,6 +138,7 @@ body {
 
 .remove-image {
   width: 200px;
+  left: 40%;
   margin: 0;
   color: #fff;
   background: #cd4535;
@@ -216,4 +219,5 @@ body {
   transform: translate(-50%, -50%);
   height: 77%;
   width: 67%;
+  z-index: 0;
 }

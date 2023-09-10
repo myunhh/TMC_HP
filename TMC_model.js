@@ -135,25 +135,25 @@ arrResult[ri] = '볼드모트';
 arrImgs[ri++] = ['character_card/Death_Eaters.png', 'character_card/Death_Eaters_Voldemort.png', 'flag/Death_Eaters_Flag.png', 'background/Death_Eaters.png', 'character_info/Voldemort.png'];
 
 arrResult[ri] = '루베우스해그리드';
-arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Rubeus_Hagrid.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/RubeusHagrid.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Rubeus_Hagrid.png', 'flag/Hogwarts_Flag.png', 'background/Hogwarts.png', 'character_info/RubeusHagrid.png'];
 
 arrResult[ri] = '미네르바맥고나걸';
-arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Minerva_McGonagall.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/MinervaMcGonagall.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Minerva_McGonagall.png', 'flag/Hogwarts_Flag.png', 'background/Hogwarts.png', 'character_info/MinervaMcGonagall.png'];
 
 arrResult[ri] = '세베루스스네이프';
-arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Severus_Snape.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/SeverusSnape.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Severus_Snape.png', 'flag/Hogwarts_Flag.png', 'background/Hogwarts.png', 'character_info/SeverusSnape.png'];
 
 arrResult[ri] = '시빌패트리샤트릴로니';
-arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Sibyl_Patricia_Trelawney.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/SybillPatriciaTrelawney.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Sibyl_Patricia_Trelawney.png', 'flag/Hogwarts_Flag.png', 'background/Hogwarts.png', 'character_info/SybillPatriciaTrelawney.png'];
 
 arrResult[ri] = '알버스덤블도어';
-arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Albus_Dumbledore.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/AlbusDumbledore.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Albus_Dumbledore.png', 'flag/Hogwarts_Flag.png', 'background/Hogwarts.png', 'character_info/AlbusDumbledore.png'];
 
 arrResult[ri] = '질데로이록허트';
-arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Gellert_Grindelwald.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/GilderoyLockhart.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Gellert_Grindelwald.png', 'flag/Hogwarts_Flag.png', 'background/Hogwarts.png', 'character_info/GilderoyLockhart.png'];
 
 arrResult[ri] = '호러스슬러그혼';
-arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Horace_Slughorn.png', 'flag/Hogwarts.png', 'background/Hogwarts.png', 'character_info/HoraceSlughorn.png'];
+arrImgs[ri++] = ['character_card/Hogwarts.png', 'character_card/Hogwarts_Horace_Slughorn.png', 'flag/Hogwarts_Flag.png', 'background/Hogwarts.png', 'character_info/HoraceSlughorn.png'];
 
 function PictureShow() {
     console.log(arrResult[0]);
