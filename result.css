@@ -84,7 +84,7 @@ button.dimd {
 
 .contentWrap .front h1 {
   position: absolute;
-  top: 35%;
+  top: 15%;
   left: 49.5%;
   width: 50%;
   height: 50%;
@@ -95,19 +95,18 @@ button.dimd {
 
 .contentWrap .front h2 {
   position: absolute;
-  top: 15%;
-  left: 35%;
-  width: 80%;
-  height: 40%;
+  top: 66%;
+  left: 25%;
+  width: 100%;
+  height: 22%;
   object-fit: contain;
-  background-image: url("") no-repeat;
   z-index: 0;
 }
 
 .contentWrap .front h3 {
   position: absolute;
   top: 10%;
-  left: 118%;
+  left: 117%;
   width: 50%;
   height: 71%;
   object-fit: none;
