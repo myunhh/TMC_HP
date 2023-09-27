@@ -4,10 +4,10 @@ let model, webcam, labelContainer, maxPredictions;
 async function init() {
     const modelURL = URL + 'model.json';
     const metadataURL = URL + 'metadata.json';
-
-    const startButton = document.getElementById('start-button');
-
-    startButton.disabled = true;
+    //const startButton = document.getElementById('start-button');
+    hideLoading();
+    showLoading();
+    //startButton.disabled = true;
     try {
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
@@ -15,13 +15,15 @@ async function init() {
         for (let i = 0; i < maxPredictions; i++) {
             labelContainer.appendChild(document.createElement('div'));
         }
-        startButton.disabled = false;
-        alert("Machine Is Ready! Please Press The Predict Button!");
+        //startButton.disabled = false;
+        predict(); // 2023/09/27 RyanMin
+        // alert("Machine Is Ready! Please Press The Predict Button!");
     } catch (error) {
         console.error('Error loading model:', error);
-        startButton.innerHTML = 'Failed';
+        //startButton.innerHTML = 'Failed';
         alert("Please Press The Start Button Again")
     }
+    hideLoading();
 }
 async function predict() {
     var image = document.getElementById('face-image');
@@ -57,14 +59,12 @@ function readURL(input) {
 
         reader.onload = function (e) {
             $('.image-upload-wrap').hide();
-
             $('.file-upload-image').attr('src', e.target.result);
             $('.file-upload-content').show();
-
             $('.image-title').html(input.files[0].name);
         };
-
         reader.readAsDataURL(input.files[0]);
+        $(".btnPredict").show();
     } else {
         removeUpload();
     }
@@ -180,4 +180,15 @@ function PictureShow() {
     }
 
     location.href = 'result.html?pBg=' + FirImageElement.src + '&pfw=' + SecImageElement.src + '&pFg=' + flagImg.src + '&pBac=' + backgroundImg.src + '&pIf=' + InfoImg.src;
+}
+
+
+function showLoading() {
+  $("body").append("<div class='cover-all-in-progress'></div>");
+  $("body").append("<div class='loading'></div>");
+}
+
+function hideLoading() {
+  $(".cover-all-in-progress").remove();
+  $(".loading").remove();   
 }

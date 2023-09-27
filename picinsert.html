@@ -1,52 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="picinsert.css" />
+        <link rel="stylesheet" href="picinsert.css?2023092701" />
         <meta charset="utf-8" />
         <title>Harry Potter Character Classification Model</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="TMC_model.js?2023092701"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     </head>
     <body>
         <div class="background-image">
-            <button class="start" id="start-button" type="button" onclick="init()">
-                <img class="start" src="images/picinsert/start.png">
-            </button>
-            <button class="predict" type="button" onclick="predict()">
-                <img class="predict" src="images/picinsert/predict.png">
-            </button>
-            <script
-                class="jsbin"
-                src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
-            ></script>
+            <a class="btnPredict buttons" href="javascript:init();">PREDICT</a>
             <div class="file-upload">
-                <button
-                class="file-upload-btn"
-                type="button"
-                onclick="$('.file-upload-input').trigger('click')"
-                >
-                <img class="file-upload-btn" src="images/picinsert/button_4.png">
-                <!--<img class="image1" src="images/button_4.png">-->
-            </button>
-            <div class="image-upload-wrap">
-                <input
-                    class="file-upload-input"
-                    type="file"
-                    onchange="readURL(this);"
-                    accept="image/*"
-                    style="z-index: 1;"
-                />
-                <img class="image-title-wrap" src="images/picinsert/button_2.png" style="z-index: 0;">
-            </div>
-                <div class="file-upload-content" style="z-index: 5;">
+                <a href="javascript:$('.file-upload-input').trigger('click');" class="btnAddPicture buttons">ADD IMAGE</a>
+                <div class="image-upload-wrap">
+                    <input
+                        class="file-upload-input"
+                        type="file"
+                        onchange="readURL(this);"
+                        accept="image/*"
+                        style="z-index: 1;"
+                    />
+                    <img class="image-title-wrap" src="images/picinsert/button_2.png" style="z-index: 0;">
+                </div>
+                <div class="file-upload-content" style="z-index: 5; display:none;">
                     <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                     <div class="image-title-wrap">
-                        <button type="button" onclick="removeUpload()" class="remove-image">
-                            Remove <span class="image-title">Uploaded Image</span>
-                        </button>
                     </div>
                 </div>
-            </div>
-            <div class="board">
-                <img class="board" style="z-index: 0;" src="images/picinsert/bord.png">
             </div>
         </div>
         <div id="webcam-container"></div>
@@ -63,8 +46,6 @@
         <img id="FlagImg" src=""  /><br />
         <img id="InfoImg" src="" /><br />
 
-        <script src="TMC_model.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
     </body>
 </html>
