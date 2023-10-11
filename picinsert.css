@@ -222,7 +222,6 @@ body {
   z-index: 0;
 }
 
-
 .buttons {
   cursor: pointer;
   font-size:1.2em;
@@ -259,8 +258,13 @@ body {
 .cover-all-in-progress {
   z-index:300;
   background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAcSURBVBhXY2RgYPgPBECKgYEJxgABJigNBAwMAM3OBv8C3YgmAAAAAElFTkSuQmCC');
-  position:fixed;top:0;left:0;width:100%;height:100%;opacity:0.4;}
-@keyframes zigzag {25% {transform:rotate(30deg);} 75% {transform:rotate(-30deg);}}
+  position:fixed;top:0;left:0;width:100%;height:100%;opacity:0.4;
+}
+
+@keyframes zigzag {
+  25% {transform:rotate(30deg);} 75% {transform:rotate(-30deg);}
+}
+
 .loading {
   z-index:400;position:absolute;top:calc(50% - 150px);left:calc(50% - 150px);
   animation: zigzag .8s linear infinite;transform-origin:50% 50%;
