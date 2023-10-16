@@ -235,18 +235,43 @@ body {
   text-align:center;
   background: rgba(0, 0, 0, 0.4);
 }
+
 .buttons:hover {
   border: 0.2rem solid #fff; 
   
   box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
 }
+
 .btnAddPicture {
   text-decoration:none;
   position: absolute;
   z-index: 1;
   top: 22%;
+  /*
+  left: calc(50% - 170px);
+  */
+  left: 31%;
+}
+
+.btnOpenCamera {
+  text-decoration:none;
+  position: absolute;
+  z-index: 1;
+  top: 22%;
+  /*
+  left: calc(50% - 170px);
+  */
+  left: 51%;
+}
+
+.btnTakePhoto {
+  text-decoration:none;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
   left: calc(50% - 170px);
 }
+
 .btnPredict {
   text-decoration:none;
   position: absolute;

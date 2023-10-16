@@ -169,11 +169,11 @@ function PictureShow() {
 
     for (var i = 0; i < arrResult.length; i++) {
         if (arrResult[i] == r) {
-            FirImageElement.src = 'images/' + arrImgs[i][0]; //그릅별 이미지
-            SecImageElement.src = 'images/' + arrImgs[i][1]; //인물별 이미지
-            flagImg.src = 'images/' + arrImgs[i][2]; //그룹별 깃발
-            backgroundImg.src = 'images/' + arrImgs[i][3]; //그룹별 백그라운드 이미지
-            InfoImg.src = 'images/' + arrImgs[i][4]; //캐릭터 설명 이미지 가져오기
+            FirImageElement.src = 'images/' + arrImgs[i][0];
+            SecImageElement.src = 'images/' + arrImgs[i][1];
+            flagImg.src = 'images/' + arrImgs[i][2];
+            backgroundImg.src = 'images/' + arrImgs[i][3];
+            InfoImg.src = 'images/' + arrImgs[i][4];
             
             break;
         }

@@ -124,19 +124,19 @@
       </div>
     </div>
     <script>
-      function createAnchorTag() {
+      function createATag() {
         const container = document.getElementById("front");
 
-        const anchorTag = document.createElement("a");
+        const aTag = document.createElement("a");
 
-        anchorTag.href = "index.html";
-        anchorTag.textContent = "RETURN";
-        anchorTag.className = "buttons";
+        aTag.href = "index.html";
+        aTag.textContent = "RETURN";
+        aTag.className = "buttons";
 
-        container.appendChild(anchorTag);
+        container.appendChild(aTag);
       }
 
-      setTimeout(createAnchorTag, 10000);
+      setTimeout(createATag, 10000);
     </script>
   </body>
 </html>

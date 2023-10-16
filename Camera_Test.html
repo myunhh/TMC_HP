@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카메라로 사진 찍기</title>
+  <style>
+    #capture-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    #captured-image {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="capture-container">
+    <button onclick="capturePhoto()">사진 찍기</button>
+    <img id="captured-image" alt="Captured Photo">
+  </div>
+
+  <script>
+    async function capturePhoto() {
+      const video = document.createElement('video');
+      const constraints = { video: { facingMode: 'environment' }, audio: false };
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        video.srcObject = stream;
+        await video.play();
+
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        const capturedImage = canvas.toDataURL('image/png');
+
+        const capturedImageView = document.getElementById('captured-image');
+        capturedImageView.src = capturedImage;
+        capturedImageView.style.display = 'block';
+
+        stream.getTracks().forEach(track => track.stop());
+        video.remove();
+        canvas.remove();
+      } catch (error) {
+        console.error('카메라 액세스 오류:', error);
+      }
+    }
+  </script>
+</body>
+</html>
