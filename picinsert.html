@@ -14,7 +14,7 @@
             <a class="btnPredict buttons" href="javascript:init();">PREDICT</a>
             <div class="file-upload">
                 <a href="javascript:$('.file-upload-input').trigger('click');" class="btnAddPicture buttons">ADD IMAGE</a>
-                <a href="javascript:$('.file-upload-input').trigger('click');" class="btnOpenCamera buttons">TAKE PHOTO</a> <!--수정할 부분 카메라 실행, 이미지  바꿔넣는것으로보기 -->
+                <a href="javascript:takePhoto();" class="btnOpenCamera buttons">TAKE PHOTO</a>
                 <div class="image-upload-wrap">
                     <input
                         class="file-upload-input"
@@ -25,7 +25,7 @@
                     />
                     <img class="image-title-wrap" src="images/picinsert/button_2.png" style="z-index: 0;">
                 </div>
-                <div class="file-upload-content" style="z-index: 5; display:none;">
+                <div class="file-upload-content" id="file-upload-content"style="z-index: 5; display:none;">
                     <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                     <div class="image-title-wrap">
                     </div>
@@ -43,5 +43,94 @@
         <img id="BacImage" src="" /><br />
         <img id="FlagImg" src=""  /><br />
         <img id="InfoImg" src="" /><br />
+        <script>
+            async function takePhoto() {
+                const video = document.createElement("video");
+                const constraints = {
+                    video: { facingMode: "environment" },
+                    audio: false,
+                };
+            /*        
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    video.srcObject = stream;
+                    await video.play();
+        
+                    const canvas = document.createElement("canvas");
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+                    const capturedImage = canvas.toDataURL("image/png");
+        
+                    const capturedImageView = document.getElementById("file-upload-content");
+                    capturedImageView.innerHTML = `<img class="file-upload-image" id="face-image" src="${capturedImage}" alt="your image" />`;
+                    //capturedImageView.style.display = "block";
+        
+                    stream.getTracks().forEach((track) => track.stop());
+                    video.remove();
+                    canvas.remove();
+                } 
+                catch (error) {
+                    console.error("카메라 액세스 오류:", error);
+                }
+            }
+            
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                video.srcObject = stream;
+                await video.play();
+
+                const canvas = document.createElement("canvas");
+                canvas.width = 300;
+                canvas.height = 225;
+                const context = canvas.getContext("2d");
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                const capturedImage = canvas.toDataURL("image/png");
+                const capturedImageView = document.getElementById("face-image");
+                capturedImageView.src = capturedImage;
+
+                stream.getTracks().forEach((track) => track.stop());
+                video.remove();
+                canvas.remove();
+            } 
+            catch (error) {
+                console.error("카메라 액세스 오류:", error);
+            }
+            }
+        */
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                const video = document.createElement("video");
+                video.srcObject = stream;
+                await video.play();
+
+                const canvas = document.createElement("canvas");
+                canvas.width = 300;
+                canvas.height = 225;
+                const context = canvas.getContext("2d");
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                const capturedImage = new Image();
+                capturedImage.src = canvas.toDataURL("image/png");
+
+                await new Promise(resolve => {
+                    capturedImage.onload = resolve;
+                });
+
+                const capturedImageView = document.getElementById("face-image");
+                capturedImageView.src = capturedImage.src;
+
+                stream.getTracks().forEach((track) => track.stop());
+                video.remove();
+                canvas.remove();
+            } 
+            catch (error) {
+                console.error("카메라 액세스 오류:", error);
+            }
+            }
+        </script>
     </body>
 </html>
