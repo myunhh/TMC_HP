@@ -44,63 +44,12 @@
         <img id="FlagImg" src=""  /><br />
         <img id="InfoImg" src="" /><br />
         <script>
-            async function takePhoto() {
-                const video = document.createElement("video");
-                const constraints = {
-                    video: { facingMode: "environment" },
-                    audio: false,
-                };
-            /*        
-                try {
-                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
-                    video.srcObject = stream;
-                    await video.play();
-        
-                    const canvas = document.createElement("canvas");
-                    canvas.width = video.videoWidth;
-                    canvas.height = video.videoHeight;
-                    canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
-                    const capturedImage = canvas.toDataURL("image/png");
-        
-                    const capturedImageView = document.getElementById("file-upload-content");
-                    capturedImageView.innerHTML = `<img class="file-upload-image" id="face-image" src="${capturedImage}" alt="your image" />`;
-                    //capturedImageView.style.display = "block";
-        
-                    stream.getTracks().forEach((track) => track.stop());
-                    video.remove();
-                    canvas.remove();
-                } 
-                catch (error) {
-                    console.error("카메라 액세스 오류:", error);
-                }
-            }
-            
-
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia(constraints);
-                video.srcObject = stream;
-                await video.play();
-
-                const canvas = document.createElement("canvas");
-                canvas.width = 300;
-                canvas.height = 225;
-                const context = canvas.getContext("2d");
-                context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-                const capturedImage = canvas.toDataURL("image/png");
-                const capturedImageView = document.getElementById("face-image");
-                capturedImageView.src = capturedImage;
-
-                stream.getTracks().forEach((track) => track.stop());
-                video.remove();
-                canvas.remove();
-            } 
-            catch (error) {
-                console.error("카메라 액세스 오류:", error);
-            }
-            }
-        */
-
+        async function takePhoto() {
+            const video = document.createElement("video");
+            const constraints = {
+                video: { facingMode: "environment" },
+                audio: false,
+            };
             try {
                 const stream = await navigator.mediaDevices.getUserMedia(constraints);
                 const video = document.createElement("video");
@@ -123,14 +72,19 @@
                 const capturedImageView = document.getElementById("face-image");
                 capturedImageView.src = capturedImage.src;
 
+                /*-- Show Element. add by RyanMin --*/
+                $("#file-upload-content").show();
+                $('.image-upload-wrap').hide();
+                $(".btnPredict").show();
+                /*-- End Of Show Element. --*/
+
                 stream.getTracks().forEach((track) => track.stop());
                 video.remove();
                 canvas.remove();
-            } 
-            catch (error) {
+            } catch (error) {
                 console.error("카메라 액세스 오류:", error);
             }
-            }
+        }
         </script>
     </body>
 </html>
